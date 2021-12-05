@@ -560,6 +560,7 @@ input[type=email], input[type=password] {
     margin: 5% 2% 0% 10%;
     text-align: right;
     direction: rtl; display: inline;
+    box-sizing: border-box;
 }
 
 .imgs {
