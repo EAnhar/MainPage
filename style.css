@@ -556,7 +556,7 @@ input[type=email], input[type=password] {
 
 .blogBody {
     position: relative;
-    margin: 5% 2% 0% 1%;
+    margin: 5% 2% 0% 10%;
     text-align: right;
     direction: rtl; display: inline;
 }
