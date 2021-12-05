@@ -66,11 +66,8 @@ The blog page is a blog where the traveler writes the details of the trip and ad
 
 >> send your feedback <3
 
-<video src="https://user-images.githubusercontent.com/73385631/144751621-68e7d3c0-5e15-4afd-a097-a3cc0f0971f7.mp4
-" width="50%">
+> https://user-images.githubusercontent.com/73385631/144751621-68e7d3c0-5e15-4afd-a097-a3cc0f0971f7.mp4
 
-if you want try websit on local host, make sure to edit $conn variable in all pages 
-and create database as attach query in (DBQuery.text) file.
 
 ###### Thank you, Have a nice Travel :) 
 <p align="right"> <img src="https://user-images.githubusercontent.com/73385631/144685033-cead65ee-b710-41f8-89d3-95274dd3841c.png" width="20%"> </p>
