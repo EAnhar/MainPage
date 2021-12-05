@@ -126,7 +126,7 @@
                             <summary>
                                 <h2 class="blogTitle">'.$blogsR["title"].'</h2>
                             </summary>
-                            <p class="blogBody"> <br> '.$blogsR["content"].
+                            <pre class="blogBody"> <br> '.$blogsR["content"].
                             '<br> <br> <div class = "blogimgs">'
                             ;
 
@@ -136,7 +136,7 @@
                             }
                             echo'
                             </div>
-                            </p>
+                            </pre>
                             
                         </details>
                         </div>';
