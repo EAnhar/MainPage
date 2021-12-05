@@ -530,14 +530,13 @@ input[type=email], input[type=password] {
     display: block;
     position: absolute;
     width: 72%; height: 75%;
-    margin: -35% 0% 0% 300%;
+    margin: -35% 0% 0% 30%;
     overflow-y: auto;
     overflow-x:hidden;
 }
 
 .blog {
     margin: 3% 0% 2% 2%;
-    text-align: right;
     width: 95%;
     outline: none; float: left;
 }
