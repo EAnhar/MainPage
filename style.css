@@ -537,6 +537,7 @@ input[type=email], input[type=password] {
 
 .blog {
     margin: 3% 0% 2% 2%;
+    text-align: right;
     width: 95%;
     outline: none; float: left;
 }
