@@ -95,7 +95,7 @@
                         <div> <article class="article" data-city="i'.$idR["id"].'" id="i'.$idR["id"].'">
                         <h2>'.$blogsR["title"].'</h2>
                         <h5>كُتبَ بواسطة: '.$usernameR["username"].'@</h5>
-                        <div class="post-header"><img src=blogsImgs/headerImgs/'.$blogsR["header"].'</div>
+                        <div class="post-header"><img src= "blogsImgs/headerImgs/'.$blogsR["header"].'"></div>
                         <pre class="desc" style="display: inline;">'.$blogsR["descr"].'</pre>
                         <div class="dots" style="display: inline;">...</div>
                         <div class="more" style="display: none;">'.$blogsR["content"].'<br><br>
