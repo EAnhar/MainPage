@@ -22,15 +22,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <style>
-    .closein {
-        cursor: pointer;
-        position: absolute;
-        margin-top: -127%;
-        margin-left: 43%;
-        color: black;
-        display: block;
-    }
-    </style>
 </head>
 
 <body>
@@ -254,8 +245,7 @@
             $folder = "blogsImgs/headerImgs/".$fileName;
 
             $bt = $_POST['bt']; $bc = $_POST['bc']; $bd = $_POST['bdes'];
-            $insertQ = 'INSERT into blogs (email, title, content, descr, header) values 
-                         ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'", "'.$fileName.'")';
+            $insertQ = 'INSERT into blogs (email, title, content, descr, header) values ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'", "'.$fileName.'")';
             $insertC = mysqli_query($conn, $insertQ);  
             if($insertC) {
                 $idQ = 'SELECT id from blogs where title = "'.$bt.'"';
