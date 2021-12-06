@@ -770,13 +770,13 @@ input[type=email], input[type=password] {
    position: relative;
    }
 
-   .post-header {
+.post-header {
        position: relative;
        width: 100%;
        padding: 10px; height: 150px;
-   }
+}
 
-   .post-header img { width: 100%; height: 150px;}
+   /* .post-header div { width: 100%; height: 150px;} */
 
     .more img{
     width:40%;
@@ -1187,7 +1187,7 @@ text-align: center;
   }
 
 
-  #blogx {
+#blogx {
     cursor: pointer;
     position: absolute;
     margin-top: -121%;
