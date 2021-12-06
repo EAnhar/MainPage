@@ -233,7 +233,11 @@
             <input type="text" placeholder="وصف التدوينة" required id="blogDes" name="bdes"> <br><br>
             <textarea placeholder="اكتب تدوينتك هنا" required name="bc"></textarea>
 
-            <input type="file" style="margin-left: 25%;" name="bimg[]" multiple><br><br>
+            <button class="bt1" for="header"><label for="header" >تعيين ترويسة </label></button>
+            <input type="file" visibility: hidden  name="bheader" id="header"> 
+
+            <button class="bt2" for="imgs" ><label for="imgsin" >إرفاق صور</label></button>
+            <input type="file" name="bimg[]" visibility: hidden id="imgsin" multiple><br><br>
 
             <h1><a href="#" onclick="hideBlog(insertBlog, allPage);" class="closein bi bi-x"></a></h1>
             <input type="submit" value="نشـــر" class="blogSubmit" name="share"> <input type="reset" value="مســح"
@@ -245,8 +249,13 @@
 
     <?php
         if(isset($_POST['share'])) {
+            $fileName = basename($_FILES['bheader']['name']); 
+            $tempname = $_FILES["bheader"]["tmp_name"];    
+            $folder = "blogsImgs/headerImgs".$fileName;
+
             $bt = $_POST['bt']; $bc = $_POST['bc']; $bd = $_POST['bdes'];
-            $insertQ = 'INSERT into blogs (email, title, content, descr) values  ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'")';
+            $insertQ = 'INSERT into blogs (email, title, content, descr, header) values 
+                         ("'.$em.'", "'.$bt.'", "'.$bc.'", "'.$bd.'", "'.$fileName.'")';
             $insertC = mysqli_query($conn, $insertQ);  
             if($insertC) {
                 $idQ = 'SELECT id from blogs where title = "'.$bt.'"';
@@ -257,16 +266,16 @@
                 $usernameC = mysqli_query($conn, $usernameQ);  
                 $usernameR = mysqli_fetch_array($usernameC, MYSQLI_ASSOC);
                 
-                    foreach($_FILES['bimg']['name'] as $key=>$val){ 
-                        $fileName = basename($_FILES['bimg']['name'][$key]); 
-                        $tempname = $_FILES["bimg"]["tmp_name"];    
-                        $folder = "blogsImgs/".$fileName;
+                foreach($_FILES['bimg']['name'] as $key=>$val){ 
+                    $fileName = basename($_FILES['bimg']['name'][$key]); 
+                    $tempname = $_FILES["bimg"]["tmp_name"];    
+                    $folder = "blogsImgs/".$fileName;
 
-                        if(move_uploaded_file($_FILES["bimg"]["tmp_name"][$key], $folder)) {
-                            $insertQ = 'INSERT into imgs (id, img) values ("'.$usernameR["username"].''.$idR["id"].'", "'.$fileName.'")';
-                            $insertC = mysqli_query($conn, $insertQ);  
-                        }
+                    if(move_uploaded_file($_FILES["bimg"]["tmp_name"][$key], $folder)) {
+                        $insertQ = 'INSERT into imgs (id, img) values ("'.$usernameR["username"].''.$idR["id"].'", "'.$fileName.'")';
+                        $insertC = mysqli_query($conn, $insertQ);  
                     }
+                }
             } 
         }
     ?>
