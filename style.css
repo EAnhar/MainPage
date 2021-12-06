@@ -663,32 +663,6 @@ input[type=email], input[type=password] {
 
 .insertBlog input[type=submit] {margin-right: 25%;}
 
-#blogx {
-    cursor: pointer;
-    position: absolute;
-    margin-top: -121%;
-    margin-left: 48%;
-    color: black;
-    display: block;
-}
-.bt1, .bt2 {
-    width: 185px;height: 20px;
-    border-radius: 0%;position: absolute;
-    top: 82.6%;box-shadow: none;
-    background-color:#9aaebb73;
-    color: black;
-}
-.bt1 { margin-left: 4%; right:3%; }
-.bt2 { margin-right: -5%; left:4%; }
-
-.bt1 label, .bt2 label {
-    font-family:'Courier New', Courier, monospace; 
-    font-weight: normal; font-size: 15px; 
-    padding-right: 20%;
-}
-
-.bt1:hover, .bt2:hover {background-color: #9aaebb; width: 185px; height: 20px;}
-
 /* هنا عشان اللي يبي ينسخ او يحدد نص */
 ::selection {
     color: white;
@@ -1211,3 +1185,30 @@ text-align: center;
              font-size: 15px;
          }
   }
+
+
+  #blogx {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -121%;
+    margin-left: 48%;
+    color: black;
+    display: block;
+}
+.bt1, .bt2 {
+    width: 185px;height: 20px;
+    border-radius: 0%;position: absolute;
+    top: 82.6%;box-shadow: none;
+    background-color:#9aaebb73;
+    color: black;
+}
+.bt1 { margin-left: 4%; right:3%; }
+.bt2 { margin-right: -5%; left:4%; }
+
+.bt1 label, .bt2 label {
+    font-family:'Courier New', Courier, monospace; 
+    font-weight: normal; font-size: 15px; 
+    padding-right: 20%;
+}
+
+.bt1:hover, .bt2:hover {background-color: #9aaebb; width: 185px; height: 20px;}
