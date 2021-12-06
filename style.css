@@ -796,6 +796,13 @@ input[type=email], input[type=password] {
    position: relative;
    }
 
+   .post-header {
+       position: relative;
+       width: 100%;
+       padding: 10px; height: 150px;
+   }
+
+   .post-header img { width: 100%; height: 150px;}
 
     .more img{
     width:40%;

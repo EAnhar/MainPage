@@ -251,7 +251,7 @@
         if(isset($_POST['share'])) {
             $fileName = basename($_FILES['bheader']['name']); 
             $tempname = $_FILES["bheader"]["tmp_name"];    
-            $folder = "blogsImgs/headerImgs".$fileName;
+            $folder = "blogsImgs/headerImgs/".$fileName;
 
             $bt = $_POST['bt']; $bc = $_POST['bc']; $bd = $_POST['bdes'];
             $insertQ = 'INSERT into blogs (email, title, content, descr, header) values 
