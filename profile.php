@@ -229,7 +229,7 @@
             <button class="bt2" for="imgs" ><label for="imgsin" >إرفاق صور</label></button>
             <input type="file" name="bimg[]" visibility: hidden id="imgsin" multiple><br><br>
 
-            <h1><a href="#" onclick="hideBlog(insertBlog, allPage);" class="closein bi bi-x"></a></h1>
+            <h1><a href="#" onclick="hideBlog(insertBlog, allPage);" class="bi bi-x" id="blogx"></a></h1>
             <input type="submit" value="نشـــر" class="blogSubmit" name="share"> <input type="reset" value="مســح"
                 class="blogReset">
         </form>
